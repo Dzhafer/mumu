@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+	<head>
+		<title>Блог на Джанго</title>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	</head>
+	<body>
+		<div>
+		<header>
+			<div class="nav-left">
+				<h1><a href="{% url 'home' %}">Блог на Джанго</a></h1>
+			</div>
+			<div class="nav-right">
+				<a href="{% url 'post_new' %}">+Добавить новое сообщение</a>
+			</div>
+		</header>
+			{% block content %}
+			{% endblock content %}
+		</div>		
+	</body>
+</html>
